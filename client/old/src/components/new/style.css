@@ -1,0 +1,101 @@
+.todoForm{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    border-radius: 5px;
+    padding: 2ch 2ch;
+    margin-bottom: 2ch;
+}
+
+input[type=text]:focus{
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+::placeholder {
+  color: hsl(233, 11%, 84%);
+  opacity: 1; 
+}
+
+::-ms-input-placeholder { 
+  color: hsl(233, 11%, 84%);
+}
+
+/* The container */
+.todoForm .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+.todoForm  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.todoForm .checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid hsl(236, 33%, 92%);
+}
+  
+  /* On mouse-over, add a grey background color */
+.todoForm .container:hover input ~ .checkmark {
+    background-color: transparent;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.todoForm .container input:checked ~ .checkmark {
+    background-image: linear-gradient(to bottom right,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.todoForm .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.todoForm .container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.todoForm .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.todoForm .input{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+}

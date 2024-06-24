@@ -1,0 +1,133 @@
+.todoList{
+    position: relative;
+    border-radius: 5px;
+}
+
+.todoList .content{
+    min-height: 250px;
+    max-height: 500px;
+    /* overflow-y: scroll; */
+}
+
+.todoInfo{
+    display: flex;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2ch;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.content .empty-message{
+    text-align: center;
+    padding: 2ch 0;
+}
+
+.todoInfo .filter{
+    display: flex;
+    gap: 2ch;
+    cursor: pointer;
+}
+
+.todoInfo button{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.todoItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(236, 33%, 92%);
+    padding: 0 2ch;
+    cursor: pointer;
+    /* touch-action: none; */
+}
+
+.todoItem:hover button img{
+    display: block;
+} 
+
+.check-container{
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+}
+ /* The container */
+.todoItem .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default checkbox */
+.todoItem .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.todoItem .checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid hsl(236, 33%, 92%);
+}
+  
+  /* On mouse-over, add a grey background color */
+.todoItem .container:hover input ~ .checkmark {
+    background-color: transparent;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.todoItem .container input:checked ~ .checkmark {
+    background-image: linear-gradient(to bottom right,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.todoItem .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.todoItem .container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.todoItem .container .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.todoItem button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
